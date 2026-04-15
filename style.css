@@ -53,21 +53,26 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* ensures titles always show */
+  justify-content: flex-start; /* keeps content under title */
   align-items: center;
   text-align: center;
-  padding-top: 20px; /* raises everything */
+  padding-top: 80px; /* space under title */
   overflow: hidden;
 }
 
-/* PAGE TITLES — CENTERED + RAISED */
+/* PAGE TITLES — LOCKED TO TOP + CENTERED */
 .page-title {
   font-size: 3.2rem;
   font-weight: 700;
-  margin-top: 5px;      /* raises title */
-  margin-bottom: 20px;  /* small spacing before content */
-  align-self: center;
   text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  /* forces title to top of page */
+  position: absolute;
+  top: 60px; /* sits below nav bar */
+  left: 0;
 }
 
 /* HOME PAGE */
@@ -136,7 +141,7 @@ body {
   gap: 25px;
   width: 100%;
   max-width: 1200px;
-  margin-top: 0px; /* raises grid */
+  margin-top: -10px; /* raises grid closer to title */
 }
 
 .project-box {
@@ -145,7 +150,7 @@ body {
   border-radius: 12px;
   font-size: 1.45rem;
   font-weight: 700;
-  min-height: 500px; /* taller */
+  min-height: 500px;
   box-shadow: 0 0 18px rgba(0,0,0,0.35);
 }
 
