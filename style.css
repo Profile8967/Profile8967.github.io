@@ -54,7 +54,7 @@ body {
   text-align: left;
 }
 
-/* RESUME PAGE SPACING (BASE TIGHTENING) */
+/* RESUME PAGE SPACING (OPTION A — SLIGHTLY CLOSER) */
 .page.resume .content {
   margin-top: 20px;
 }
@@ -65,28 +65,6 @@ body {
 
 .page.resume .page-title {
   margin-bottom: 20px;
-}
-
-/* RESUME — fine‑tuned header spacing */
-
-/* Education closer to Resume title */
-.page.resume .resume-section:nth-of-type(1) {
-  margin-top: 10px;
-}
-
-/* Certifications closer to Education */
-.page.resume .resume-section:nth-of-type(2) {
-  margin-top: 8px;
-}
-
-/* Windows Server closer to Certifications */
-.page.resume .resume-section:nth-of-type(3) {
-  margin-top: 10px;
-}
-
-/* Firewall & VPN closer to Windows Server */
-.page.resume .resume-section:nth-of-type(4) {
-  margin-top: 10px;
 }
 
 /* RESUME SECTIONS */
