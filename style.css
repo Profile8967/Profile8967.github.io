@@ -57,7 +57,7 @@ body {
   transform: scale(1.05);
 }
 
-/* PAGE TITLES — CENTERED + LOCKED TO TOP */
+/* PAGE TITLES — CENTERED BY DEFAULT */
 .page-title {
   font-size: 3.2rem;
   font-weight: 700;
@@ -68,7 +68,10 @@ body {
   left: 0;
 }
 
-/* CONTENT AREA (DEFAULT FOR HOME + PROJECTS) */
+/* ------------------------- */
+/* HOME PAGE                 */
+/* ------------------------- */
+
 .content {
   flex: 1;
   display: flex;
@@ -77,10 +80,6 @@ body {
   padding-top: 100px;
   overflow: hidden;
 }
-
-/* ------------------------- */
-/* HOME PAGE                 */
-/* ------------------------- */
 
 .home-name {
   font-size: 3.6rem;
@@ -100,9 +99,16 @@ body {
 }
 
 /* ------------------------- */
-/* RESUME PAGE (LEFT‑ALIGNED) */
+/* RESUME PAGE (FULL LEFT)   */
 /* ------------------------- */
 
+/* Move resume title left */
+.page.resume .page-title {
+  text-align: left;
+  padding-left: 10px;
+}
+
+/* Left-align all resume content */
 .page.resume .content {
   align-items: flex-start;
   padding-top: 80px;
@@ -110,24 +116,29 @@ body {
   text-align: left;
 }
 
+/* Resume sections */
 .page.resume .resume-section {
   width: 100%;
-  max-width: 600px;
+  max-width: 650px;
   margin-bottom: 22px;
   text-align: left;
 }
 
+/* Section headers */
 .page.resume .resume-section h3 {
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
+/* Paragraphs */
 .page.resume .resume-section p {
   font-size: 1.2rem;
   margin-bottom: 8px;
+  white-space: nowrap; /* stays on one line */
 }
 
+/* Bullet lists */
 .page.resume .resume-section ul {
   list-style: none;
   padding-left: 20px;
@@ -136,6 +147,7 @@ body {
 .page.resume .resume-section ul li {
   margin-bottom: 8px;
   font-size: 1.1rem;
+  white-space: nowrap; /* each bullet stays on one line */
 }
 
 .page.resume .resume-section ul li::before {
@@ -143,11 +155,13 @@ body {
   font-weight: bold;
 }
 
+/* Certifications row */
 .page.resume .cert-horizontal {
   display: flex;
   gap: 12px;
   justify-content: flex-start;
   font-size: 1.1rem;
+  white-space: nowrap;
 }
 
 /* ------------------------- */
