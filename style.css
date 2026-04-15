@@ -160,7 +160,10 @@ body {
   margin-top: 0;
   justify-items: center;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 
 .project-box {
   padding: 30px 30px 20px 30px;
