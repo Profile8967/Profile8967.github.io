@@ -79,53 +79,54 @@ body {
 /* HOME PAGE */
 .home-name {
   font-size: 3.6rem;
-  margin-bottom: 25px;
   font-weight: 700;
-  margin-top: -10px; /* slight lift */
+  margin-bottom: 20px;
+  margin-top: -25px; /* raises the title upward */
 }
 
 .bio {
   max-width: 850px;
-  background: rgba(255,255,255,0.12);
-  padding: 45px 50px;
+  background: rgba(0, 0, 0, 0.35); /* darker */
+  padding: 30px 40px;              /* tighter */
   border-radius: 14px;
   font-size: 1.3rem;
   box-shadow: 0 0 18px rgba(0,0,0,0.35);
-  margin-top: -5px; /* slight lift */
+  margin-top: -20px;               /* raises the box */
 }
 
-/* RESUME PAGE — OVERRIDES ONLY APPLY ON resume.html */
+/* RESUME PAGE — TEXT ONLY + SPACED + RAISED */
 .page.resume .content {
-  padding-top: 90px; /* resume content sits closer to title */
+  padding-top: 80px; /* resume content sits closer to title */
 }
 
 .page.resume .resume-section {
-  margin-bottom: 10px;
+  margin-bottom: 22px; /* more spacing between sections */
   max-width: 600px;
   width: 100%;
-  background: rgba(255,255,255,0.12);
-  padding: 14px 18px;
-  border-radius: 10px;
+  background: none;     /* no box */
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: center;
 }
 
 .page.resume .resume-section h3 {
-  text-align: center;
-  margin-bottom: 8px;
-  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 
 .page.resume .resume-section ul {
   list-style: none;
-  text-align: left;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 0;
+  margin: 0 auto;
   width: fit-content;
+  text-align: left;
 }
 
 .page.resume .resume-section ul li {
-  margin-bottom: 6px;
-  font-size: 1.05rem;
+  margin-bottom: 8px; /* slightly more spacing */
+  font-size: 1.1rem;
 }
 
 .page.resume .resume-section ul li::before {
@@ -140,28 +141,28 @@ body {
   font-size: 1.1rem;
 }
 
-/* PROJECTS PAGE */
+/* PROJECTS PAGE — DARKER BOXES + LESS BOTTOM WHITESPACE */
 .project-columns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   width: 100%;
   max-width: 1200px;
-  margin-top: 0px; /* restored original spacing */
+  margin-top: 0px;
 }
 
 .project-box {
-  padding: 35px;
-  background: rgba(255,255,255,0.15);
+  padding: 30px 30px 20px 30px;   /* reduced bottom padding */
+  background: rgba(0, 0, 0, 0.35); /* darker */
   border-radius: 12px;
   font-size: 1.35rem;
   font-weight: 700;
-  min-height: 500px;
+  min-height: 480px;
   box-shadow: 0 0 18px rgba(0,0,0,0.35);
 }
 
 .project-box p {
-  margin-top: 15px;
+  margin-top: 12px;
   font-size: 1.15rem;
   font-weight: 400;
   line-height: 1.6;
