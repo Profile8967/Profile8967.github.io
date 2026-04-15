@@ -63,7 +63,7 @@ body {
   left: 0;
 }
 
-/* CONTENT AREA */
+/* CONTENT AREA — DEFAULT FOR HOME + PROJECTS */
 .content {
   flex: 1;
   display: flex;
@@ -72,30 +72,34 @@ body {
   align-items: center;
   text-align: center;
 
-  padding-top: 120px; /* space under title */
+  padding-top: 100px; /* restored original spacing */
   overflow: hidden;
 }
 
 /* HOME PAGE */
 .home-name {
   font-size: 3.6rem;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-weight: 700;
-  margin-top: -20px; /* raises name/title */
+  margin-top: -10px; /* slight lift */
 }
 
 .bio {
   max-width: 850px;
   background: rgba(255,255,255,0.12);
-  padding: 40px 45px;
+  padding: 45px 50px;
   border-radius: 14px;
   font-size: 1.3rem;
   box-shadow: 0 0 18px rgba(0,0,0,0.35);
-  margin-top: -10px; /* raises bio box */
+  margin-top: -5px; /* slight lift */
 }
 
-/* RESUME SECTIONS — CONDENSED + RAISED */
-.resume-section {
+/* RESUME PAGE — OVERRIDES ONLY APPLY ON resume.html */
+.page.resume .content {
+  padding-top: 90px; /* resume content sits closer to title */
+}
+
+.page.resume .resume-section {
   margin-bottom: 10px;
   max-width: 600px;
   width: 100%;
@@ -104,14 +108,14 @@ body {
   border-radius: 10px;
 }
 
-.resume-section h3 {
+.page.resume .resume-section h3 {
   text-align: center;
   margin-bottom: 8px;
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-.resume-section ul {
+.page.resume .resume-section ul {
   list-style: none;
   text-align: left;
   margin-left: auto;
@@ -119,46 +123,45 @@ body {
   width: fit-content;
 }
 
-.resume-section ul li {
+.page.resume .resume-section ul li {
   margin-bottom: 6px;
   font-size: 1.05rem;
 }
 
-.resume-section ul li::before {
+.page.resume .resume-section ul li::before {
   content: "• ";
   font-weight: bold;
 }
 
-/* CERTIFICATIONS */
-.cert-horizontal {
+.page.resume .cert-horizontal {
   display: flex;
   gap: 12px;
   justify-content: center;
   font-size: 1.1rem;
 }
 
-/* PROJECTS PAGE — RAISED + TALLER BOXES */
+/* PROJECTS PAGE */
 .project-columns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   width: 100%;
   max-width: 1200px;
-  margin-top: -10px; /* raises grid closer to title */
+  margin-top: 0px; /* restored original spacing */
 }
 
 .project-box {
-  padding: 30px;
+  padding: 35px;
   background: rgba(255,255,255,0.15);
   border-radius: 12px;
   font-size: 1.35rem;
   font-weight: 700;
-  min-height: 480px;
+  min-height: 500px;
   box-shadow: 0 0 18px rgba(0,0,0,0.35);
 }
 
 .project-box p {
-  margin-top: 12px;
+  margin-top: 15px;
   font-size: 1.15rem;
   font-weight: 400;
   line-height: 1.6;
